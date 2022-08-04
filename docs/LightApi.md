@@ -1,4 +1,4 @@
-# openapi_client.LightApi
+# og_client.LightApi
 
 All URIs are relative to *http://0.0.0.0:8001*
 
@@ -57,13 +57,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_configuration_calendar_range import LightConfigurationCalendarRange
+import og_client
+from og_client.api import light_api
+from og_client.model.light_configuration_calendar_range import LightConfigurationCalendarRange
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -73,13 +73,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     data = LightConfigurationCalendarRange(
@@ -94,7 +94,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_calendar_create(data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_calendar_create: %s\n" % e)
 ```
 
@@ -138,12 +138,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
+import og_client
+from og_client.api import light_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -153,13 +153,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this calendar range.
@@ -167,7 +167,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.light_config_calendar_delete(id)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_calendar_delete: %s\n" % e)
 ```
 
@@ -211,13 +211,13 @@ void (empty response body)
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_config_calendar_list200_response import LightConfigCalendarList200Response
+import og_client
+from og_client.api import light_api
+from og_client.model.light_config_calendar_list200_response import LightConfigCalendarList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -227,13 +227,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     search = "search_example" # str | A search term. (optional)
@@ -244,7 +244,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_calendar_list(search=search, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_calendar_list: %s\n" % e)
 ```
 
@@ -289,13 +289,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_configuration_calendar_range import LightConfigurationCalendarRange
+import og_client
+from og_client.api import light_api
+from og_client.model.light_configuration_calendar_range import LightConfigurationCalendarRange
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -305,13 +305,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this calendar range.
@@ -327,7 +327,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_calendar_partial_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_calendar_partial_update: %s\n" % e)
 ```
 
@@ -372,13 +372,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_configuration_calendar_range import LightConfigurationCalendarRange
+import og_client
+from og_client.api import light_api
+from og_client.model.light_configuration_calendar_range import LightConfigurationCalendarRange
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -388,13 +388,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this calendar range.
@@ -403,7 +403,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_calendar_read(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_calendar_read: %s\n" % e)
 ```
 
@@ -447,13 +447,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_configuration_calendar_range import LightConfigurationCalendarRange
+import og_client
+from og_client.api import light_api
+from og_client.model.light_configuration_calendar_range import LightConfigurationCalendarRange
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -463,13 +463,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this calendar range.
@@ -485,7 +485,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_calendar_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_calendar_update: %s\n" % e)
 ```
 
@@ -530,13 +530,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_configuration import LightConfiguration
+import og_client
+from og_client.api import light_api
+from og_client.model.light_configuration import LightConfiguration
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -546,13 +546,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     data = LightConfiguration(
@@ -568,7 +568,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_create(data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_create: %s\n" % e)
 ```
 
@@ -612,13 +612,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_configuration_daily_time_range import LightConfigurationDailyTimeRange
+import og_client
+from og_client.api import light_api
+from og_client.model.light_configuration_daily_time_range import LightConfigurationDailyTimeRange
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -628,13 +628,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     data = LightConfigurationDailyTimeRange(
@@ -654,7 +654,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_daily_create(data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_daily_create: %s\n" % e)
 ```
 
@@ -698,12 +698,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
+import og_client
+from og_client.api import light_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -713,13 +713,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this daily time range.
@@ -727,7 +727,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.light_config_daily_delete(id)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_daily_delete: %s\n" % e)
 ```
 
@@ -771,13 +771,13 @@ void (empty response body)
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_config_daily_list200_response import LightConfigDailyList200Response
+import og_client
+from og_client.api import light_api
+from og_client.model.light_config_daily_list200_response import LightConfigDailyList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -787,13 +787,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     search = "search_example" # str | A search term. (optional)
@@ -804,7 +804,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_daily_list(search=search, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_daily_list: %s\n" % e)
 ```
 
@@ -849,13 +849,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_configuration_daily_time_range import LightConfigurationDailyTimeRange
+import og_client
+from og_client.api import light_api
+from og_client.model.light_configuration_daily_time_range import LightConfigurationDailyTimeRange
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -865,13 +865,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this daily time range.
@@ -892,7 +892,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_daily_partial_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_daily_partial_update: %s\n" % e)
 ```
 
@@ -937,13 +937,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_configuration_daily_time_range import LightConfigurationDailyTimeRange
+import og_client
+from og_client.api import light_api
+from og_client.model.light_configuration_daily_time_range import LightConfigurationDailyTimeRange
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -953,13 +953,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this daily time range.
@@ -968,7 +968,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_daily_read(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_daily_read: %s\n" % e)
 ```
 
@@ -1012,13 +1012,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_configuration_daily_time_range import LightConfigurationDailyTimeRange
+import og_client
+from og_client.api import light_api
+from og_client.model.light_configuration_daily_time_range import LightConfigurationDailyTimeRange
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1028,13 +1028,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this daily time range.
@@ -1055,7 +1055,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_daily_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_daily_update: %s\n" % e)
 ```
 
@@ -1100,12 +1100,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
+import og_client
+from og_client.api import light_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1115,13 +1115,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this config.
@@ -1129,7 +1129,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.light_config_delete(id)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_delete: %s\n" % e)
 ```
 
@@ -1173,13 +1173,13 @@ void (empty response body)
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_config_list200_response import LightConfigList200Response
+import og_client
+from og_client.api import light_api
+from og_client.model.light_config_list200_response import LightConfigList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1189,13 +1189,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     search = "search_example" # str | A search term. (optional)
@@ -1206,7 +1206,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_list(search=search, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_list: %s\n" % e)
 ```
 
@@ -1251,13 +1251,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_configuration import LightConfiguration
+import og_client
+from og_client.api import light_api
+from og_client.model.light_configuration import LightConfiguration
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1267,13 +1267,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this config.
@@ -1290,7 +1290,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_partial_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_partial_update: %s\n" % e)
 ```
 
@@ -1335,13 +1335,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_configuration import LightConfiguration
+import og_client
+from og_client.api import light_api
+from og_client.model.light_configuration import LightConfiguration
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1351,13 +1351,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this config.
@@ -1366,7 +1366,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_read(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_read: %s\n" % e)
 ```
 
@@ -1410,13 +1410,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_configuration_type import LightConfigurationType
+import og_client
+from og_client.api import light_api
+from og_client.model.light_configuration_type import LightConfigurationType
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1426,13 +1426,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     data = LightConfigurationType(
@@ -1443,7 +1443,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_type_create(data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_type_create: %s\n" % e)
 ```
 
@@ -1487,12 +1487,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
+import og_client
+from og_client.api import light_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1502,13 +1502,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this config type.
@@ -1516,7 +1516,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.light_config_type_delete(id)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_type_delete: %s\n" % e)
 ```
 
@@ -1560,13 +1560,13 @@ void (empty response body)
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_config_type_list200_response import LightConfigTypeList200Response
+import og_client
+from og_client.api import light_api
+from og_client.model.light_config_type_list200_response import LightConfigTypeList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1576,13 +1576,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     search = "search_example" # str | A search term. (optional)
@@ -1593,7 +1593,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_type_list(search=search, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_type_list: %s\n" % e)
 ```
 
@@ -1638,13 +1638,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_configuration_type import LightConfigurationType
+import og_client
+from og_client.api import light_api
+from og_client.model.light_configuration_type import LightConfigurationType
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1654,13 +1654,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this config type.
@@ -1672,7 +1672,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_type_partial_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_type_partial_update: %s\n" % e)
 ```
 
@@ -1717,13 +1717,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_configuration_type import LightConfigurationType
+import og_client
+from og_client.api import light_api
+from og_client.model.light_configuration_type import LightConfigurationType
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1733,13 +1733,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this config type.
@@ -1748,7 +1748,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_type_read(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_type_read: %s\n" % e)
 ```
 
@@ -1792,13 +1792,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_configuration_type import LightConfigurationType
+import og_client
+from og_client.api import light_api
+from og_client.model.light_configuration_type import LightConfigurationType
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1808,13 +1808,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this config type.
@@ -1826,7 +1826,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_type_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_type_update: %s\n" % e)
 ```
 
@@ -1871,13 +1871,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_configuration import LightConfiguration
+import og_client
+from og_client.api import light_api
+from og_client.model.light_configuration import LightConfiguration
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1887,13 +1887,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this config.
@@ -1910,7 +1910,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_config_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_config_update: %s\n" % e)
 ```
 
@@ -1955,13 +1955,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_force_controller import LightForceController
+import og_client
+from og_client.api import light_api
+from og_client.model.light_force_controller import LightForceController
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1971,13 +1971,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     data = LightForceController(
@@ -1990,7 +1990,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_controller_force_create(data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_controller_force_create: %s\n" % e)
 ```
 
@@ -2034,12 +2034,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
+import og_client
+from og_client.api import light_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -2049,13 +2049,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this force controller.
@@ -2063,7 +2063,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.light_controller_force_delete(id)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_controller_force_delete: %s\n" % e)
 ```
 
@@ -2107,13 +2107,13 @@ void (empty response body)
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_controller_force_list200_response import LightControllerForceList200Response
+import og_client
+from og_client.api import light_api
+from og_client.model.light_controller_force_list200_response import LightControllerForceList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -2123,13 +2123,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     search = "search_example" # str | A search term. (optional)
@@ -2140,7 +2140,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_controller_force_list(search=search, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_controller_force_list: %s\n" % e)
 ```
 
@@ -2185,13 +2185,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_force_controller import LightForceController
+import og_client
+from og_client.api import light_api
+from og_client.model.light_force_controller import LightForceController
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -2201,13 +2201,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this force controller.
@@ -2221,7 +2221,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_controller_force_partial_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_controller_force_partial_update: %s\n" % e)
 ```
 
@@ -2266,13 +2266,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_force_controller import LightForceController
+import og_client
+from og_client.api import light_api
+from og_client.model.light_force_controller import LightForceController
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -2282,13 +2282,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this force controller.
@@ -2297,7 +2297,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_controller_force_read(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_controller_force_read: %s\n" % e)
 ```
 
@@ -2341,13 +2341,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_force_controller import LightForceController
+import og_client
+from og_client.api import light_api
+from og_client.model.light_force_controller import LightForceController
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -2357,13 +2357,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this force controller.
@@ -2377,7 +2377,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_controller_force_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_controller_force_update: %s\n" % e)
 ```
 
@@ -2424,13 +2424,13 @@ Iot tag based controller live action to take only get because always updated by 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_controller_list200_response import LightControllerList200Response
+import og_client
+from og_client.api import light_api
+from og_client.model.light_controller_list200_response import LightControllerList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -2440,13 +2440,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     search = "search_example" # str | A search term. (optional)
@@ -2457,7 +2457,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_controller_list(search=search, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_controller_list: %s\n" % e)
 ```
 
@@ -2504,13 +2504,13 @@ Iot tag based controller live action to take only get because always updated by 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_controller import LightController
+import og_client
+from og_client.api import light_api
+from og_client.model.light_controller import LightController
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -2520,13 +2520,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this controller.
@@ -2535,7 +2535,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_controller_read(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_controller_read: %s\n" % e)
 ```
 
@@ -2579,13 +2579,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_device import LightDevice
+import og_client
+from og_client.api import light_api
+from og_client.model.light_device import LightDevice
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -2595,13 +2595,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     data = LightDevice(
@@ -2612,7 +2612,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_device_create(data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_device_create: %s\n" % e)
 ```
 
@@ -2656,12 +2656,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
+import og_client
+from og_client.api import light_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -2671,13 +2671,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this device.
@@ -2685,7 +2685,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.light_device_delete(id)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_device_delete: %s\n" % e)
 ```
 
@@ -2729,13 +2729,13 @@ void (empty response body)
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_device_list200_response import LightDeviceList200Response
+import og_client
+from og_client.api import light_api
+from og_client.model.light_device_list200_response import LightDeviceList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -2745,13 +2745,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     search = "search_example" # str | A search term. (optional)
@@ -2762,7 +2762,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_device_list(search=search, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_device_list: %s\n" % e)
 ```
 
@@ -2807,13 +2807,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_device import LightDevice
+import og_client
+from og_client.api import light_api
+from og_client.model.light_device import LightDevice
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -2823,13 +2823,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this device.
@@ -2841,7 +2841,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_device_partial_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_device_partial_update: %s\n" % e)
 ```
 
@@ -2886,13 +2886,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_device import LightDevice
+import og_client
+from og_client.api import light_api
+from og_client.model.light_device import LightDevice
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -2902,13 +2902,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this device.
@@ -2917,7 +2917,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_device_read(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_device_read: %s\n" % e)
 ```
 
@@ -2961,13 +2961,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_device import LightDevice
+import og_client
+from og_client.api import light_api
+from og_client.model.light_device import LightDevice
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -2977,13 +2977,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this device.
@@ -2995,7 +2995,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_device_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_device_update: %s\n" % e)
 ```
 
@@ -3042,13 +3042,13 @@ IoT tag based sensors live values only get because always updated by IoT
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_sensor_list200_response import LightSensorList200Response
+import og_client
+from og_client.api import light_api
+from og_client.model.light_sensor_list200_response import LightSensorList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -3058,13 +3058,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     search = "search_example" # str | A search term. (optional)
@@ -3075,7 +3075,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_sensor_list(search=search, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_sensor_list: %s\n" % e)
 ```
 
@@ -3122,13 +3122,13 @@ IoT tag based sensors live values only get because always updated by IoT
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import light_api
-from openapi_client.model.light_sensor import LightSensor
+import og_client
+from og_client.api import light_api
+from og_client.model.light_sensor import LightSensor
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -3138,13 +3138,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = light_api.LightApi(api_client)
     id = 1 # int | A unique integer value identifying this sensor.
@@ -3153,7 +3153,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.light_sensor_read(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling LightApi->light_sensor_read: %s\n" % e)
 ```
 

@@ -1,4 +1,4 @@
-# openapi_client.GlobalApi
+# og_client.GlobalApi
 
 All URIs are relative to *http://0.0.0.0:8001*
 
@@ -23,13 +23,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import global_api
-from openapi_client.model.global_config import GlobalConfig
+import og_client
+from og_client.api import global_api
+from og_client.model.global_config import GlobalConfig
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -39,13 +39,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = global_api.GlobalApi(api_client)
     data = GlobalConfig(
@@ -58,7 +58,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.global_config_create(data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling GlobalApi->global_config_create: %s\n" % e)
 ```
 
@@ -102,12 +102,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import global_api
+import og_client
+from og_client.api import global_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -117,13 +117,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = global_api.GlobalApi(api_client)
     id = 1 # int | A unique integer value identifying this config.
@@ -131,7 +131,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.global_config_delete(id)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling GlobalApi->global_config_delete: %s\n" % e)
 ```
 
@@ -175,13 +175,13 @@ void (empty response body)
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import global_api
-from openapi_client.model.global_config_list200_response import GlobalConfigList200Response
+import og_client
+from og_client.api import global_api
+from og_client.model.global_config_list200_response import GlobalConfigList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -191,13 +191,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = global_api.GlobalApi(api_client)
     search = "search_example" # str | A search term. (optional)
@@ -208,7 +208,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.global_config_list(search=search, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling GlobalApi->global_config_list: %s\n" % e)
 ```
 
@@ -253,13 +253,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import global_api
-from openapi_client.model.global_config import GlobalConfig
+import og_client
+from og_client.api import global_api
+from og_client.model.global_config import GlobalConfig
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -269,13 +269,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = global_api.GlobalApi(api_client)
     id = 1 # int | A unique integer value identifying this config.
@@ -289,7 +289,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.global_config_partial_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling GlobalApi->global_config_partial_update: %s\n" % e)
 ```
 
@@ -334,13 +334,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import global_api
-from openapi_client.model.global_config import GlobalConfig
+import og_client
+from og_client.api import global_api
+from og_client.model.global_config import GlobalConfig
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -350,13 +350,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = global_api.GlobalApi(api_client)
     id = 1 # int | A unique integer value identifying this config.
@@ -365,7 +365,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.global_config_read(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling GlobalApi->global_config_read: %s\n" % e)
 ```
 
@@ -409,13 +409,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import global_api
-from openapi_client.model.global_config import GlobalConfig
+import og_client
+from og_client.api import global_api
+from og_client.model.global_config import GlobalConfig
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -425,13 +425,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = global_api.GlobalApi(api_client)
     id = 1 # int | A unique integer value identifying this config.
@@ -445,7 +445,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.global_config_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling GlobalApi->global_config_update: %s\n" % e)
 ```
 

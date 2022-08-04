@@ -1,4 +1,4 @@
-# openapi_client.SprinklerApi
+# og_client.SprinklerApi
 
 All URIs are relative to *http://0.0.0.0:8001*
 
@@ -39,13 +39,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_configuration import SprinklerConfiguration
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_configuration import SprinklerConfiguration
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -55,13 +55,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     data = SprinklerConfiguration(
@@ -75,7 +75,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_config_create(data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_config_create: %s\n" % e)
 ```
 
@@ -119,12 +119,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
+import og_client
+from og_client.api import sprinkler_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -134,13 +134,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     id = 1 # int | A unique integer value identifying this config.
@@ -148,7 +148,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.sprinkler_config_delete(id)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_config_delete: %s\n" % e)
 ```
 
@@ -192,13 +192,13 @@ void (empty response body)
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_config_list200_response import SprinklerConfigList200Response
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_config_list200_response import SprinklerConfigList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -208,13 +208,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     search = "search_example" # str | A search term. (optional)
@@ -225,7 +225,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_config_list(search=search, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_config_list: %s\n" % e)
 ```
 
@@ -270,13 +270,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_configuration import SprinklerConfiguration
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_configuration import SprinklerConfiguration
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -286,13 +286,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     id = 1 # int | A unique integer value identifying this config.
@@ -307,7 +307,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_config_partial_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_config_partial_update: %s\n" % e)
 ```
 
@@ -352,13 +352,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_configuration import SprinklerConfiguration
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_configuration import SprinklerConfiguration
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -368,13 +368,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     id = 1 # int | A unique integer value identifying this config.
@@ -383,7 +383,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_config_read(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_config_read: %s\n" % e)
 ```
 
@@ -427,13 +427,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_configuration import SprinklerConfiguration
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_configuration import SprinklerConfiguration
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -443,13 +443,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     id = 1 # int | A unique integer value identifying this config.
@@ -464,7 +464,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_config_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_config_update: %s\n" % e)
 ```
 
@@ -509,13 +509,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_force_controller import SprinklerForceController
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_force_controller import SprinklerForceController
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -525,13 +525,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     data = SprinklerForceController(
@@ -544,7 +544,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_controller_force_create(data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_controller_force_create: %s\n" % e)
 ```
 
@@ -588,12 +588,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
+import og_client
+from og_client.api import sprinkler_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -603,13 +603,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     id = 1 # int | A unique integer value identifying this force controller.
@@ -617,7 +617,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.sprinkler_controller_force_delete(id)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_controller_force_delete: %s\n" % e)
 ```
 
@@ -661,13 +661,13 @@ void (empty response body)
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_controller_force_list200_response import SprinklerControllerForceList200Response
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_controller_force_list200_response import SprinklerControllerForceList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -677,13 +677,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     search = "search_example" # str | A search term. (optional)
@@ -694,7 +694,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_controller_force_list(search=search, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_controller_force_list: %s\n" % e)
 ```
 
@@ -739,13 +739,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_force_controller import SprinklerForceController
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_force_controller import SprinklerForceController
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -755,13 +755,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     id = 1 # int | A unique integer value identifying this force controller.
@@ -775,7 +775,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_controller_force_partial_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_controller_force_partial_update: %s\n" % e)
 ```
 
@@ -820,13 +820,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_force_controller import SprinklerForceController
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_force_controller import SprinklerForceController
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -836,13 +836,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     id = 1 # int | A unique integer value identifying this force controller.
@@ -851,7 +851,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_controller_force_read(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_controller_force_read: %s\n" % e)
 ```
 
@@ -895,13 +895,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_force_controller import SprinklerForceController
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_force_controller import SprinklerForceController
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -911,13 +911,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     id = 1 # int | A unique integer value identifying this force controller.
@@ -931,7 +931,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_controller_force_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_controller_force_update: %s\n" % e)
 ```
 
@@ -978,13 +978,13 @@ Iot tag based controller live action to take only get because always updated by 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_controller_list200_response import SprinklerControllerList200Response
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_controller_list200_response import SprinklerControllerList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -994,13 +994,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     search = "search_example" # str | A search term. (optional)
@@ -1011,7 +1011,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_controller_list(search=search, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_controller_list: %s\n" % e)
 ```
 
@@ -1058,13 +1058,13 @@ Iot tag based controller live action to take only get because always updated by 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_controller import SprinklerController
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_controller import SprinklerController
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1074,13 +1074,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     id = 1 # int | A unique integer value identifying this controller.
@@ -1089,7 +1089,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_controller_read(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_controller_read: %s\n" % e)
 ```
 
@@ -1133,13 +1133,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_device import SprinklerDevice
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_device import SprinklerDevice
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1149,13 +1149,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     data = SprinklerDevice(
@@ -1166,7 +1166,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_device_create(data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_device_create: %s\n" % e)
 ```
 
@@ -1210,12 +1210,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
+import og_client
+from og_client.api import sprinkler_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1225,13 +1225,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     id = 1 # int | A unique integer value identifying this device.
@@ -1239,7 +1239,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.sprinkler_device_delete(id)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_device_delete: %s\n" % e)
 ```
 
@@ -1283,13 +1283,13 @@ void (empty response body)
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_device_list200_response import SprinklerDeviceList200Response
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_device_list200_response import SprinklerDeviceList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1299,13 +1299,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     search = "search_example" # str | A search term. (optional)
@@ -1316,7 +1316,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_device_list(search=search, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_device_list: %s\n" % e)
 ```
 
@@ -1361,13 +1361,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_device import SprinklerDevice
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_device import SprinklerDevice
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1377,13 +1377,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     id = 1 # int | A unique integer value identifying this device.
@@ -1395,7 +1395,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_device_partial_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_device_partial_update: %s\n" % e)
 ```
 
@@ -1440,13 +1440,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_device import SprinklerDevice
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_device import SprinklerDevice
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1456,13 +1456,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     id = 1 # int | A unique integer value identifying this device.
@@ -1471,7 +1471,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_device_read(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_device_read: %s\n" % e)
 ```
 
@@ -1515,13 +1515,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_device import SprinklerDevice
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_device import SprinklerDevice
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1531,13 +1531,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     id = 1 # int | A unique integer value identifying this device.
@@ -1549,7 +1549,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_device_update(id, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_device_update: %s\n" % e)
 ```
 
@@ -1596,13 +1596,13 @@ IoT tag based sensors live values only get because always updated by IoT
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_sensor_list200_response import SprinklerSensorList200Response
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_sensor_list200_response import SprinklerSensorList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1612,13 +1612,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     search = "search_example" # str | A search term. (optional)
@@ -1629,7 +1629,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_sensor_list(search=search, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_sensor_list: %s\n" % e)
 ```
 
@@ -1676,13 +1676,13 @@ IoT tag based sensors live values only get because always updated by IoT
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sprinkler_api
-from openapi_client.model.sprinkler_sensor import SprinklerSensor
+import og_client
+from og_client.api import sprinkler_api
+from og_client.model.sprinkler_sensor import SprinklerSensor
 from pprint import pprint
 # Defining the host is optional and defaults to http://0.0.0.0:8001
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     host = "http://0.0.0.0:8001"
 )
 
@@ -1692,13 +1692,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = og_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with og_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sprinkler_api.SprinklerApi(api_client)
     id = 1 # int | A unique integer value identifying this sensor.
@@ -1707,7 +1707,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sprinkler_sensor_read(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except og_client.ApiException as e:
         print("Exception when calling SprinklerApi->sprinkler_sensor_read: %s\n" % e)
 ```
 
