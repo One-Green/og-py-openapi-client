@@ -8,6 +8,9 @@ Name | Type | Description | Notes
 **ph_max_level** | **float** |  | 
 **tds_min_level** | **float** |  | 
 **tds_max_level** | **float** |  | 
+**water_tank_height** | **float** |  | 
+**nutrient_tank_height** | **float** |  | 
+**ph_downer_tank_height** | **float** |  | 
 **tag** | **int** |  | 
 **id** | **int** |  | [optional] [readonly] 
 **created_at** | **datetime** |  | [optional] [readonly] 

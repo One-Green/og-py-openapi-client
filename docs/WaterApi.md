@@ -69,6 +69,9 @@ with og_client.ApiClient(configuration) as api_client:
         ph_max_level=3.14,
         tds_min_level=3.14,
         tds_max_level=3.14,
+        water_tank_height=3.14,
+        nutrient_tank_height=3.14,
+        ph_downer_tank_height=3.14,
         tag=1,
     ) # WaterConfiguration | 
 
@@ -302,6 +305,9 @@ with og_client.ApiClient(configuration) as api_client:
         ph_max_level=3.14,
         tds_min_level=3.14,
         tds_max_level=3.14,
+        water_tank_height=3.14,
+        nutrient_tank_height=3.14,
+        ph_downer_tank_height=3.14,
         tag=1,
     ) # WaterConfiguration | 
 
@@ -460,6 +466,9 @@ with og_client.ApiClient(configuration) as api_client:
         ph_max_level=3.14,
         tds_min_level=3.14,
         tds_max_level=3.14,
+        water_tank_height=3.14,
+        nutrient_tank_height=3.14,
+        ph_downer_tank_height=3.14,
         tag=1,
     ) # WaterConfiguration | 
 

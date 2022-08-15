@@ -86,6 +86,9 @@ class WaterConfiguration(ModelNormal):
             'ph_max_level': (float,),  # noqa: E501
             'tds_min_level': (float,),  # noqa: E501
             'tds_max_level': (float,),  # noqa: E501
+            'water_tank_height': (float,),  # noqa: E501
+            'nutrient_tank_height': (float,),  # noqa: E501
+            'ph_downer_tank_height': (float,),  # noqa: E501
             'tag': (int,),  # noqa: E501
             'id': (int,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
@@ -102,6 +105,9 @@ class WaterConfiguration(ModelNormal):
         'ph_max_level': 'ph_max_level',  # noqa: E501
         'tds_min_level': 'tds_min_level',  # noqa: E501
         'tds_max_level': 'tds_max_level',  # noqa: E501
+        'water_tank_height': 'water_tank_height',  # noqa: E501
+        'nutrient_tank_height': 'nutrient_tank_height',  # noqa: E501
+        'ph_downer_tank_height': 'ph_downer_tank_height',  # noqa: E501
         'tag': 'tag',  # noqa: E501
         'id': 'id',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
@@ -118,7 +124,7 @@ class WaterConfiguration(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, ph_min_level, ph_max_level, tds_min_level, tds_max_level, tag, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, ph_min_level, ph_max_level, tds_min_level, tds_max_level, water_tank_height, nutrient_tank_height, ph_downer_tank_height, tag, *args, **kwargs):  # noqa: E501
         """WaterConfiguration - a model defined in OpenAPI
 
         Args:
@@ -126,6 +132,9 @@ class WaterConfiguration(ModelNormal):
             ph_max_level (float):
             tds_min_level (float):
             tds_max_level (float):
+            water_tank_height (float):
+            nutrient_tank_height (float):
+            ph_downer_tank_height (float):
             tag (int):
 
         Keyword Args:
@@ -197,6 +206,9 @@ class WaterConfiguration(ModelNormal):
         self.ph_max_level = ph_max_level
         self.tds_min_level = tds_min_level
         self.tds_max_level = tds_max_level
+        self.water_tank_height = water_tank_height
+        self.nutrient_tank_height = nutrient_tank_height
+        self.ph_downer_tank_height = ph_downer_tank_height
         self.tag = tag
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
@@ -218,7 +230,7 @@ class WaterConfiguration(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, ph_min_level, ph_max_level, tds_min_level, tds_max_level, tag, *args, **kwargs):  # noqa: E501
+    def __init__(self, ph_min_level, ph_max_level, tds_min_level, tds_max_level, water_tank_height, nutrient_tank_height, ph_downer_tank_height, tag, *args, **kwargs):  # noqa: E501
         """WaterConfiguration - a model defined in OpenAPI
 
         Args:
@@ -226,6 +238,9 @@ class WaterConfiguration(ModelNormal):
             ph_max_level (float):
             tds_min_level (float):
             tds_max_level (float):
+            water_tank_height (float):
+            nutrient_tank_height (float):
+            ph_downer_tank_height (float):
             tag (int):
 
         Keyword Args:
@@ -295,6 +310,9 @@ class WaterConfiguration(ModelNormal):
         self.ph_max_level = ph_max_level
         self.tds_min_level = tds_min_level
         self.tds_max_level = tds_max_level
+        self.water_tank_height = water_tank_height
+        self.nutrient_tank_height = nutrient_tank_height
+        self.ph_downer_tank_height = ph_downer_tank_height
         self.tag = tag
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
